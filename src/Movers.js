@@ -54,27 +54,27 @@ export default class Movers extends React.Component {
                     </div>
                     <div style={{display: 'flex', flex: 3, alignItems: 'center' , flexDirection: 'column', minHeight: '20vh', justifyContent: 'space-around'}}>
                         <ButtonBase style={{outline: 'none', margin: 7}}>
-                            <img src={require('./Images/apple_logo.png')} style={{width: this.state.logo_width, height: this.state.logo_height}}/>
+                            <img alt="" src={require('./Images/apple_logo.png')} style={{width: this.state.logo_width, height: this.state.logo_height}}/>
                         </ButtonBase>
                         <ButtonBase style={{outline: 'none', margin: 7}}>
-                            <img src={require('./Images/android_logo.png')} style={{width: this.state.logo_width, height: this.state.logo_height}}/>
+                            <img alt="" src={require('./Images/android_logo.png')} style={{width: this.state.logo_width, height: this.state.logo_height}}/>
                         </ButtonBase>
                     </div>
                 </div>
                 <div style={{minHeight: '50vh', width: '100vw', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid black'}}>
                     <div style={{width: '75vw', display: 'flex', alignItems: 'center'}}>
                         <div style={{display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'space-evenly', flexDirection: 'column', minHeight: '30vh', margin: '1.3vw'}}>
-                            <img src={require('./Images/schedule.png')} style={{width: '5vw', height: '6vh', aspectRatio: 5/6}}/>
+                            <img alt="" src={require('./Images/schedule.png')} style={{width: '5vw', height: '6vh', aspectRatio: 5/6}}/>
                             <b style={{textAlign: 'center'}}>Flexible schedule</b>
                             <p style={{textAlign: 'center'}}>With MoverUp, you decide when you want to work, and we will find a job for you. Work from anywhere, anytime.</p>
                         </div>
                         <div style={{display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'space-evenly', flexDirection: 'column', minHeight: '30vh', margin: '1.3vw'}}>
-                            <img src={require('./Images/cash.png')} style={{width: '5vw', height: '6vh', aspectRatio: 5/6}}/>
+                            <img alt="" src={require('./Images/cash.png')} style={{width: '5vw', height: '6vh', aspectRatio: 5/6}}/>
                             <b style={{textAlign: 'center'}}>Lot of jobs</b>
                             <p style={{textAlign: 'center'}}>Lorem ipsum dolor sit amet, augue accusamus per an, ex dolor salutandi maiestatis eum, eam inermis probatus no. Lorem ipsum dolor sit amet</p>
                         </div>
                         <div style={{display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'space-evenly', flexDirection: 'column', minHeight: '30vh', margin: '1.3vw'}}>
-                            <img src={require('./Images/trust.png')} style={{width: '5vw', height: '6vh', aspectRatio: 5/6}}/>
+                            <img alt="" src={require('./Images/trust.png')} style={{width: '5vw', height: '6vh', aspectRatio: 5/6}}/>
                             <b style={{textAlign: 'center'}}>Trusted employers</b>
                             <p style={{textAlign: 'center'}}>Lorem ipsum dolor sit amet, augue accusamus per an, ex dolor salutandi maiestatis eum, eam inermis probatus no. Lorem ipsum dolor sit amet</p>
                         </div>

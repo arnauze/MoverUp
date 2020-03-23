@@ -1,6 +1,18 @@
 import React from 'react'
 import { ButtonBase } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
+import Amplify, { API } from 'aws-amplify'
+
+Amplify.configure({
+    API: {
+      endpoints: [
+        {
+            name: "MoverUp",
+            endpoint: "https://u7e32avpt0.execute-api.us-west-1.amazonaws.com/test/api"
+        }
+    ]
+    }
+  })
 
 export default class Contacts extends React.Component {
 
@@ -11,14 +23,41 @@ export default class Contacts extends React.Component {
     }
 
     onSubmit = () => {
+
         console.log("Submitting form")
         var emailValid = this.state.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+
         if (emailValid) {
+            console.log("Valid email")
+
+            let apiName = 'MoverUp'
+            let path = '/sendFrontPageMail'
+            let myInit = {
+                body: {
+                    fullName: this.state.full_name,
+                    mess: this.state.message,
+                    email: this.state.email
+                }
+            }
+
+            console.log("Sending email")
+
+            API.post(apiName, path, myInit)
+            .then(response => {
+                console.log("Success")
+                console.log(response)
+            })
+            .catch(err => {
+                console.log("Error")
+                console.log(err)
+            })
+
             this.setState({
                 full_name: '',
                 email: '',
                 message: ''
             })
+
         } else {
             console.log("Wrong email")
         }
